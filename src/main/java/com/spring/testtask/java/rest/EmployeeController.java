@@ -25,7 +25,7 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> listAllEmployee() {
         List<Employee> employees = employeeService.listEmployee();
         if(employees.isEmpty()){
-            return new ResponseEntity<List<Employee>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+            return new ResponseEntity<List<Employee>>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
     }
